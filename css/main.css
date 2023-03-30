@@ -158,20 +158,7 @@ body {
   color: var(--textWhite);
 }
 
-.header-slider {
-  width: 100%;
-  height: 100%;
-}
-
-.header-slider__item {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.header-slider__item::before {
+.header-slider::before {
   position: absolute;
   left: 0;
   top: 0;
@@ -179,6 +166,12 @@ body {
   width: 100%;
   height: 100%;
   background: linear-gradient(181.06deg, rgba(0, 0, 0, 0.2) 0.91%, rgba(255, 255, 255, 0) 116.71%, rgba(255, 255, 255, 0) 116.72%);
+}
+.header-slider .header-slider__item {
+  position: relative;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .header-slider__img-bg {
@@ -205,5 +198,61 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 58px 88px 0 75px;
+  width: 100%;
+}
+.header-nav .header-nav__logo .header-nav__logo-img1 {
+  padding-right: 11px;
+}
+.header-nav .header-nav__logo .header-nav__logo-img2 {
+  -webkit-transform: translateY(12px);
+          transform: translateY(12px);
+}
+.header-nav .header-nav__menu .header-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 65px;
+     -moz-column-gap: 65px;
+          column-gap: 65px;
+}
+.header-nav .header-nav__menu .header-nav__link {
+  color: var(--textWhite);
+}
+.header-nav .header-nav__menu .header-nav__link:hover, .header-nav .header-nav__menu .header-nav__link:active, .header-nav .header-nav__menu .header-nav__link:focus {
+  opacity: 0.5;
+}
+.header-title .header-subTitle {
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+  letter-spacing: 0.55em;
+  opacity: 0.7;
+  color: var(--textWhite);
+}
+.header-title .header-mainTitle {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 250px;
+  line-height: 305px;
+  background: linear-gradient(15.06deg, #000000 -3.87%, rgba(255, 255, 255, 0) 36.89%), #ffffff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 /*# sourceMappingURL=main.css.map */

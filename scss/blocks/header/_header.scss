@@ -8,18 +8,6 @@
 }
 
 .header-slider {
-  width: 100%;
-  height: 100%;
-}
-.header-slider__item {
-  position: relative;
-  width: 100%;
-  height: 100%;
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
   &::before {
     position: absolute;
     left: 0;
@@ -33,6 +21,18 @@
       rgba(255, 255, 255, 0) 116.71%,
       rgba(255, 255, 255, 0) 116.72%
     );
+  }
+
+  .header-slider__item {
+    position: relative;
+    // width: 100%;
+    // height: 100%;
+    height: 100vh;
+    object-fit: cover;
+
+    // background-size: cover;
+    // background-position: center;
+    // background-repeat: no-repeat;
   }
 }
 
@@ -56,16 +56,78 @@
   align-items: center;
 }
 
-.header-nav__log {
-}
-.header-nav__menu {
-}
-.header-nav__burger {
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 58px 88px 0 75px;
+  width: 100%;
+  .header-nav__logo {
+    .header-nav__logo-img1 {
+      padding-right: 11px;
+    }
+    .header-nav__logo-img2 {
+      transform: translateY(12px);
+    }
+  }
+  .header-nav__menu {
+    .header-nav__list {
+      display: flex;
+      column-gap: 65px;
+    }
+    .header-nav__item {
+    }
+    .header-nav__link {
+      color: var(--textWhite);
+      &:hover,
+      &:active,
+      &:focus {
+        opacity: 0.5;
+      }
+    }
+  }
+  .header-nav__extra {
+  }
 }
 .header-title {
+  .header-subTitle {
+    // transform: translateY(8px);
+
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+    letter-spacing: 0.55em;
+    opacity: 0.7;
+    color: var(--textWhite);
+  }
+  .header-mainTitle {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 250px;
+    line-height: 305px;
+    background: linear-gradient(
+        15.06deg,
+        #000000 -3.87%,
+        rgba(255, 255, 255, 0) 36.89%
+      ),
+      #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
 }
 .header-tips {
+  .tip {
+  }
+  .tip__title {
+  }
+  .tip__text {
+  }
 }
+
 .header-socials {
 }
 .header-seemore {
