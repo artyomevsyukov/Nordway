@@ -3,7 +3,7 @@
 Версия: 1.0.2. */
 @import url(https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700);
 :root {
-  --accent-color: #49a144;
+  --textWhite: #fff;
 }
 
 /* Reset and base styles  */
@@ -151,4 +151,59 @@ body {
 1. 20px минимальный размер в данном случае для paddinga который я хочу увидеть на разрешение для адаптива на 320px
 2. 50 это начальное значение и от него отнимаем минимальное
 3. 1200 ширина ограничевающего контейнера */
+.header {
+  position: relative;
+  height: 100vh;
+  background-color: #c4c4c4;
+  color: var(--textWhite);
+}
+
+.header-slider {
+  width: 100%;
+  height: 100%;
+}
+
+.header-slider__item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.header-slider__item::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(181.06deg, rgba(0, 0, 0, 0.2) 0.91%, rgba(255, 255, 255, 0) 116.71%, rgba(255, 255, 255, 0) 116.72%);
+}
+
+.header-slider__img-bg {
+  width: 100%;
+  height: 100%;
+}
+
+.header-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 /*# sourceMappingURL=main.css.map */
