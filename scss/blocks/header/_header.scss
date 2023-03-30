@@ -90,8 +90,10 @@
   }
 }
 .header-title {
+  //   position: relative;
+  width: 100%;
   .header-subTitle {
-    // transform: translateY(8px);
+    transform: translateY(28px);
 
     text-align: center;
     font-style: normal;
@@ -103,6 +105,9 @@
     color: var(--textWhite);
   }
   .header-mainTitle {
+    position: relative;
+
+    text-align: center;
     font-style: normal;
     font-weight: 700;
     font-size: 250px;
@@ -118,17 +123,100 @@
     background-clip: text;
     text-fill-color: transparent;
   }
-}
-.header-tips {
-  .tip {
-  }
-  .tip__title {
-  }
-  .tip__text {
+
+  .header-socials {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    .header-socials-list {
+      text-align: center;
+    }
+    .header-socials__item {
+      padding-left: 67px;
+      padding-bottom: 24px;
+    }
+    .header-socials__link {
+    }
+    .header-socials__icon {
+    }
   }
 }
 
-.header-socials {
+.header-tips {
+  padding-bottom: 82px;
+  display: flex;
+  column-gap: 27px;
+  justify-content: center;
+}
+.tip {
+  position: relative;
+  color: var(--textWhite);
+  display: grid;
+  gap: 4px;
+  width: 417px;
+  height: 108px;
+  padding: 34px 30px 26px 95px;
+  background-image: url("../img/icons/map-marker-line.svg");
+  background-repeat: no-repeat;
+  background-position: 35px 40px;
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    filter: blur(3px);
+    border-radius: 5px;
+    transition: background-color 0.2s linear;
+  }
+  &:hover::before {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+.tip__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+.tip__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  opacity: 0.4;
+  color: var(--textWhite);
 }
 .header-seemore {
+  position: absolute;
+  //   padding-left: 71px;
+  left: 71px;
+  bottom: 84px;
+
+  padding-left: 58px;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.1em;
+
+  opacity: 0.6;
+  transform: rotate(-90deg);
+  transform-origin: left top;
+
+  color: var(--textWhite);
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: calc(50% - 1.5px);
+
+    content: "";
+    display: block;
+    width: 38px;
+    height: 3px;
+    background-color: #ffffff;
+  }
 }
