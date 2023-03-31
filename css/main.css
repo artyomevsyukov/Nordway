@@ -385,19 +385,16 @@ body {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  color: var(--textWhite);
+  font-size: 18px;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.3);
   font-weight: 600;
 }
 
 .header-slider-control__current {
   font-size: 32px;
+  color: rgb(255, 255, 255);
   line-height: 34px;
-}
-
-.header-slider-control__total {
-  font-size: 18px;
-  line-height: 22px;
-  opacity: 0.3;
 }
 
 .tns-nav {
