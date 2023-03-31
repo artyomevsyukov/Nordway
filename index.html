@@ -6,21 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Norway</title>
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./libs/tiny-slider/tiny-slider.css" />
   </head>
   <body>
     <header class="header">
       <div class="header-slider">
-        <div class="header-slider__item">
-          <img
-            class="header-slider__img-bg"
-            src="../img/header/header-bg.jpg"
-            alt="bg 1"
-          />
-        </div>
+        <img
+          class="header-slider__item"
+          src="../img/header/bg-1.jpg"
+          alt="bg 1"
+        />
+        <img
+          class="header-slider__item"
+          src="../img/header/bg-2.jpg"
+          alt="bg 2"
+        />
+        <img
+          class="header-slider__item"
+          src="../img/header/bg-3.jpg"
+          alt="bg 3"
+        />
+        <img
+          class="header-slider__item"
+          src="../img/header/bg-4.jpg"
+          alt="bg 4"
+        />
+        <img
+          class="header-slider__item"
+          src="../img/header/bg-5.jpg"
+          alt="bg 5"
+        />
       </div>
 
-      <div class="header-slider-control"></div>
-      <div class="header-slider-pagination"></div>
+      <div class="header-slider-control">
+        <div class="header-slider-control__arrow">
+          <button><img src="../img/icons/arrow-left.svg" alt="Prev" /></button>
+          <button><img src="../img/icons/arrow-right.svg" alt="Next" /></button>
+        </div>
+        <div class="header-slider-control__count">
+          <span class="header-slider-control__current">01</span>
+          <span class="header-slider-control__total">/ 04</span>
+        </div>
+      </div>
 
       <div class="header-content">
         <div class="header-nav">
@@ -110,5 +137,7 @@
 
       <a class="header-seemore" href="#!">SEE MORE</a>
     </header>
+    <script src="./libs/tiny-slider/min/tiny-slider.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>

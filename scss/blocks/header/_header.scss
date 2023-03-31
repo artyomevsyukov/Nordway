@@ -7,43 +7,6 @@
   color: var(--textWhite);
 }
 
-.header-slider {
-  &::before {
-    position: absolute;
-    left: 0;
-    top: 0;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      181.06deg,
-      rgba(0, 0, 0, 0.2) 0.91%,
-      rgba(255, 255, 255, 0) 116.71%,
-      rgba(255, 255, 255, 0) 116.72%
-    );
-  }
-
-  .header-slider__item {
-    position: relative;
-    // width: 100%;
-    // height: 100%;
-    height: 100vh;
-    object-fit: cover;
-
-    // background-size: cover;
-    // background-position: center;
-    // background-repeat: no-repeat;
-  }
-}
-
-.header-slider__img-bg {
-  width: 100%;
-  height: 100%;
-}
-.header-slider-pagination {
-}
-.header-slider-control {
-}
 .header-content {
   position: absolute;
   top: 0;
