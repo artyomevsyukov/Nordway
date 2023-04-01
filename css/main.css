@@ -378,6 +378,7 @@ body {
 }
 
 .header-slider-control__count {
+  padding-left: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

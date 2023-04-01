@@ -45,9 +45,11 @@
 }
 
 .header-slider-control__count {
+  padding-left: 16px;
   display: flex;
   gap: 6px;
   align-items: flex-end;
+  // justify-content: flex-end;
 
   font-size: 18px;
   line-height: 22px;

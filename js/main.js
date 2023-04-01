@@ -10,28 +10,32 @@ const slider = tns({
 });
 
 const sliderPrev = document.querySelector("#sliderPrev");
-const sliderNext = document.querySelector("#sliderNext");
+// const sliderNext = document.querySelector("#sliderNext");
 
 sliderPrev.onclick = function () {
   slider.goTo("prev");
 };
-sliderNext.onclick = function () {
+// sliderNext.onclick = function () {
+//   slider.goTo("next");
+// };
+
+document.querySelector("#sliderNext").onclick = function () {
   slider.goTo("next");
 };
 
-// Что на старте
-const sliderInfo = slider.getInfo();
-
+// Блок счетчика
 const currentSliderIndexEl = document.querySelector("#sliderCurrent");
 const sliderTotalEl = document.querySelector("#sliderTotal");
 
-currentSliderIndexEl.innerText = sliderInfo.index;
-sliderTotalEl.innerText = sliderInfo.pages;
+function updateSliderCount() {
+  const sliderInfo = slider.getInfo();
+  currentSliderIndexEl.innerText = "0" + (sliderInfo.navCurrentIndex + 1);
+  sliderTotalEl.innerText = "0" + sliderInfo.pages;
+}
+// На старте
+updateSliderCount();
 
 // При перемещении
-
 slider.events.on("indexChanged", () => {
-  const sliderInfo = slider.getInfo();
-  currentSliderIndexEl.innerText = sliderInfo.index;
-  sliderTotalEl.innerText = sliderInfo.pages;
+  updateSliderCount();
 });
