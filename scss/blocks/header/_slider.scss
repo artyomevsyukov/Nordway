@@ -1,9 +1,9 @@
 .header-slider {
   &::before {
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
-    content: "";
     z-index: 1;
     width: 100%;
     height: 100%;
@@ -16,15 +16,10 @@
   }
 
   .header-slider__item {
-    position: relative;
-    // width: 100%;
-    // height: 100%;
+    // position: relative;
+
     height: 100vh;
     object-fit: cover;
-
-    // background-size: cover;
-    // background-position: center;
-    // background-repeat: no-repeat;
   }
 }
 
@@ -41,7 +36,6 @@
 .header-slider-control__arrow {
   display: flex;
   gap: 5px;
-  align-items: flex-end;
 }
 
 .header-slider-control__count {
@@ -49,12 +43,13 @@
   display: flex;
   gap: 6px;
   align-items: flex-end;
-  // justify-content: flex-end;
 
+  color: rgba(255, 255, 255, 0.3);
   font-size: 18px;
   line-height: 22px;
-  color: rgba(255, 255, 255, 0.3);
+  // line-height: 1;
   font-weight: 600;
+  text-align: right;
 }
 .header-slider-control__current {
   font-size: 32px;
@@ -68,16 +63,17 @@
 
 .tns-nav {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 50px;
   z-index: 9;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%);
 }
 
 .tns-nav button {
   display: block;
-  width: 2px;
+  width: 3px;
   height: 80px;
+  // height: calc(40px + (80 - 40) * ((100vw - 320px) / (1920 - 320)));
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 3px;
 }
@@ -85,4 +81,36 @@
 .tns-nav button.tns-nav-active {
   background-color: rgba(255, 255, 255, 1);
   border-radius: 3px 3px 0px 0px;
+}
+
+@media (max-width: 800px) {
+  .header-slider-control {
+    display: none;
+  }
+  .tns-nav {
+    display: flex;
+    top: unset;
+    right: unset;
+
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30%;
+  }
+  .tns-nav button {
+    // width: 2px;
+    // height: calc(40px + (80 - 40) * ((100vw - 320px) / (1920 - 320)));
+    height: 3px;
+    width: 60px;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .tns-nav {
+    bottom: 30%;
+  }
+  .tns-nav button {
+    height: 3px;
+    width: 40px;
+  }
 }
