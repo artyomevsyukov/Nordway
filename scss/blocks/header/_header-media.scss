@@ -17,9 +17,11 @@
 @media (max-width: 1140px) {
   .header-nav {
     padding: 58px 40px 0 40px;
-  }
-  .header-nav__menu {
-    display: none;
+    .header-nav__menu {
+      .header-nav__list {
+        display: none;
+      }
+    }
   }
   .header-tips {
     visibility: hidden;
@@ -46,6 +48,30 @@
   }
   .header-seemore {
     left: 51px;
+  }
+
+  // burger
+  .header-nav__menu.open .header-nav__list {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 46px 30px;
+
+    background-color: black;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 51px;
+    letter-spacing: 0em;
+
+    font-size: 28px;
+    font-weight: 600;
   }
 }
 

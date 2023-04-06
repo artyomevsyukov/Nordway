@@ -4,7 +4,7 @@
   height: 100vh;
   background-color: #c4c4c4;
 
-  color: var(--textWhite);
+  // color: var(--textWhite);
 }
 
 .header-content {
@@ -47,18 +47,22 @@
       display: flex;
       column-gap: 65px;
     }
-    .header-nav__item {
-    }
-    .header-nav__link {
-      color: var(--textWhite);
-      &:hover,
-      &:active,
-      &:focus {
-        opacity: 0.5;
-      }
+  }
+  .header-nav__item {
+  }
+  .header-nav__link {
+    color: var(--textWhite);
+    &:hover,
+    &:active,
+    &:focus {
+      opacity: 0.5;
     }
   }
   .header-nav__extra {
+    z-index: 20;
+  }
+  .nav-btn-img {
+    width: 35px;
   }
 }
 .header-title {
