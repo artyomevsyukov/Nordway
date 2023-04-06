@@ -48,7 +48,7 @@ const navBtnImg = document.querySelector(".nav-btn-img");
 const menuLinks = document.querySelectorAll(".header-nav__link");
 
 navBtn.onclick = () => {
-  if (nav.classList.toggle("open")) {
+  if (window.innerWidth <= 1140 && nav.classList.toggle("open")) {
     navBtnImg.src = "./img/header/nav-close.svg";
   } else {
     navBtnImg.src = "./img/header/nav-icon.svg";
